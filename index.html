@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tri111's Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio for world-renowned software engineer tri111"
+    />
+    <meta name="author" content="tri111" />
+    <!--3. 아래 link 는 웹사이트 열때 탭에 아이콘 보이게된다.-->
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
+
+    <!--1. fontawesome에서 발급받은 kit를 복사해서 붙여넣는다. -->
+    <script
+      src="https://kit.fontawesome.com/1b5f789e18.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--2. google font에서 link 복사해서 붙여넣는다. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--4. css 설정-->
+    <link rel="stylesheet" href="style.css" />
+    <!--5. js 연결 defer사용하는것을 잊지말자-->
+    <!--defer를 이용하는 것은 html파일이 파싱 되는 동안 자바 스크립트 파일을 동시에 다운로드 받아서 다만 html이 파싱이 다 완료가 된 다음에 자바스크립트 파일을 실행하기 때문에 디퍼가 굉장히 좋은 옵션이다 -->
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <!-- 주석처리는 윈도우사용자는 "ctl + /", Mac user: "comman + /" 를 누르면 자동 완성 -->
+    <!-- <h1>Heading</h1> Typography를 위한 임시 보기
+    <h2>Heading</h2>
+    <h3>Heading</h3>
+    <p>Paragraph</p> -->
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <i class="fa-brands fa-apple-pay"></i>
+        <!-- <i class="fa-brands fa-affiliatetheme"></i> -->
+        <a href="#">Thinkingncoding</a>
+      </div>
+
+      <!-- <div class="navbar__menu"></div> //a01 삭제함-->
+      <!-- ul.navbar__menu>li.navbar__menu__item*6 -->
+      <!-- 위의 명령어로 인해 nav__menu 가 중복되니 <div class=nav__menu> a01삭제해야함. -->
+      <ul class="navbar__menu">
+        <!-- 아래 active는 home 만 별도로 css에서 다르게 표현하기 위한 선택 구분자이다. -->
+        <!-- data다음에 우리가 원하는 data를 정의할수있다 target이라던지link같은것을이용해서 -->
+        <li class="navbar__menu__item active" data-link="#home">Home</li>
+        <li class="navbar__menu__item" data-link="#about">About</li>
+        <li class="navbar__menu__item" data-link="#skills">Skills</li>
+        <li class="navbar__menu__item" data-link="#work">My work</li>
+        <li class="navbar__menu__item" data-link="#testimonials">
+          Testimonial
+        </li>
+        <li class="navbar__menu__item" data-link="#contact">Contact</li>
+      </ul>
+
+      <!-- Toggle button -->
+      <button class="navbar__toggle-btn">
+        <i class="fa-solid fa-burger"></i>
+      </button>
+    </nav>
+    <!-- Home -->
+    <section id="home">
+      <!-- home__container 로 묶는 이유는 컨텐츠만 지정하기 위해서 -->
+      <div class="home__container">
+        <img src="imgs/police.png" alt=tri111's profile photo"
+        class="home__avatar">
+        <h1 class="home__title">
+          Hello, <br />
+          I'm Thinking Coder
+        </h1>
+        <h2 class="home__description">
+          A Software Engineer - Back-End & Front-End Developer
+        </h2>
+        <button class="home__contact">Contact Me</button>
+      </div>
+    </section>
+    <!-- About -->
+    <section id="about" class="section section__container">
+      <!-- 위의 class="section" 부분을 다른  skills, work, testimonial,contact 등에 공통적으로 적용한다. -->
+      <h1>About me</h1>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </p>
+
+      <div class="about__majors">
+        <div class="major">
+          <div class="major__icon">
+            <i class="fa-brands fa-html5"></i>
+          </div>
+          <h2 class="major__title">Front-end</h2>
+          <div class="major__description">
+            HTML, CSS, JavaScript, TypeScript,
+            <br />React, Vue, Web APIs
+          </div>
+        </div>
+
+        <div class="major">
+          <div class="major__icon">
+            <i class="fa-solid fa-mobile-button"></i>
+          </div>
+          <h2 class="major__title">Mobile</h2>
+          <div class="major__description">
+            Android, iOS, React Native, Flutter,
+            <br />Java, Swift, Kotlin
+          </div>
+        </div>
+
+        <div class="major">
+          <div class="major__icon">
+            <i class="fa-solid fa-server"></i>
+          </div>
+          <h2 class="major__title">Back-end</h2>
+          <div class="major__description">
+            Java, JavaScript, Go, NodeJs,
+            <br />Rest APIs, GraphGL
+          </div>
+        </div>
+      </div>
+
+      <div class="about__jobs">
+        <div class="job">
+          <img
+            src="imgs/jobs/kakobank.png"
+            alt="kakobank"
+            class="job__logo"
+            width="70px"
+            height="70px"
+          />
+          <div class="job__description">
+            <p class="job__name">
+              Currently working at kakobank as Software Engineer (전자금융
+              시스템)
+            </p>
+            <p class="job__period">2017 Mar - Until now</p>
+          </div>
+        </div>
+        <div class="job">
+          <!-- tyle="margin-right: 15px; margin-left: 15px"는 원본그림사이즈가 서로 상이하여 마진을 주어 개별적으로 맞춤 -->
+          <img
+            src="imgs/jobs/saving.jpg"
+            alt="savingbank"
+            class="job__logo"
+            width="40px"
+            height="40px"
+            style="margin-right: 15px; margin-left: 15px"
+          />
+          <div class="job__description">
+            <p class="job__name">
+              Currently working at KFSB as Software Engineer (전자금융 시스템)
+            </p>
+            <p class="job__period">2002 Mar - Until now</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills -->
+
+    <section id="skills" class="section">
+      <!-- 배경은 유지되면서 안의 컨텐츠는 max-width를 유지해야하므로 
+    새로운박스(section__container)를 하나 만든후   넣는다. -->
+      <div class="section__container">
+        <h1>Skills</h1>
+        <h2>Skills & Attributes</h2>
+        <p>
+          Experience with all phases of the software life-cycle. Passion for
+          learning new technologies. Capable of working within a team
+          environment and independently. Ability to plan and time schedule, work
+          under strict time pressure and adapt quickly when needed.
+        </p>
+
+        <div class="skillset">
+          <div class="skillset__left">
+            <h3 class="skillset__title">Skills</h3>
+
+            <div class="skill">
+              <div class="skillset__description">
+                <span>HTML</span>
+                <span>99%</span>
+              </div>
+              <!-- 기존 html 태그를 이용하여 하지 않고 (: 스타일링하기 까다롭기때문에) -->
+              <!-- 2개의 div 를 이용하여 자체적으로 프로그레스 바를 만든다. -->
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 99%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skillset__description" style="width: 99">
+                <span>CSS</span>
+                <span>99%</span>
+              </div>
+              <!-- 기존 html 태그를 이용하여 하지 않고 (: 스타일링하기 까다롭기때문에) -->
+              <!-- 2개의 div 를 이용하여 자체적으로 프로그레스 바를 만든다. -->
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skillset__description">
+                <span>JavaScript</span>
+                <span>90%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skillset__description">
+                <span>React</span>
+                <span>90%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skillset__description">
+                <span>Python</span>
+                <span>99%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 99%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skillset__description">
+                <span>Django</span>
+                <span>90%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skillset__right">
+            <div class="tools">
+              <h3 class="skillset__title">Tools</h3>
+              <ul class="tools__list">
+                <li><span>Visual Studio Code</span></li>
+                <li><span>IntelliJ</span></li>
+                <li><span>Atom</span></li>
+                <li><span>SublimeText</span></li>
+                <li><span>Pycharm</span></li>
+              </ul>
+            </div>
+            <div class="etc">
+              <h3 class="skillset__title">Etc</h3>
+              <ul class="etc__list">
+                <li><span>Git</span></li>
+                <li><span>Scrum master</span></li>
+                <li><span>Math</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Work -->
+    <section id="work" class="section">
+      <div class="section__container">
+        <h1>My work</h1>
+        <h3>Projects</h3>
+        <div class="work__categories">
+          <button class="category__btn active">
+            All <span class="category__count">8</span>
+          </button>
+          <button class="category__btn">
+            Front-end <span class="category__count">3</span>
+          </button>
+          <button class="category__btn">
+            Back-end <span class="category__count">3</span>
+          </button>
+          <button class="category__btn">
+            Mobile <span class="category__count">2</span>
+          </button>
+        </div>
+
+        <div class="work__projects">
+          <a
+            href="https://thinkingncoding.tistory.com/"
+            class="project"
+            target="blank"
+          >
+            <img class="project__img" src="imgs/dog.png" alt="dog" />
+            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+            <div class="project__description">
+              <h3>Youtube site</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+
+          <a
+            href="https://thinkingncoding.tistory.com/"
+            class="project"
+            target="blank"
+          >
+            <img class="project__img" src="imgs/dog.png" alt="dog" />
+            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+            <div class="project__description">
+              <h3>Youtube site</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+
+          <a
+            href="https://thinkingncoding.tistory.com/"
+            class="project"
+            target="blank"
+          >
+            <img
+              class="project__img"
+              src="imgs/testimonial/avata.png"
+              alt="dog"
+            />
+            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+            <div class="project__description">
+              <h3>Youtube site</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+
+          <a
+            href="https://thinkingncoding.tistory.com/"
+            class="project"
+            target="blank"
+          >
+            <img
+              class="project__img"
+              src="imgs/testimonial/man.png"
+              alt="dog"
+            />
+            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+            <div class="project__description">
+              <h3>Youtube site</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+
+          <a
+            href="https://thinkingncoding.tistory.com/"
+            class="project"
+            target="blank"
+          >
+            <img
+              class="project__img"
+              src="imgs/testimonial/yaeri.png"
+              alt="dog"
+            />
+            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+            <div class="project__description">
+              <h3>Youtube site</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+
+          <a
+            href="https://thinkingncoding.tistory.com/"
+            class="project"
+            target="blank"
+          >
+            <img class="project__img" src="imgs/dog.png" alt="dog" />
+            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+            <div class="project__description">
+              <h3>Youtube site</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+
+          <a
+            href="https://thinkingncoding.tistory.com/"
+            class="project"
+            target="blank"
+          >
+            <img class="project__img" src="imgs/dog.png" alt="dog" />
+            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+            <div class="project__description">
+              <h3>Youtube site</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+
+          <a
+            href="https://thinkingncoding.tistory.com/"
+            class="project"
+            target="blank"
+          >
+            <img class="project__img" src="imgs/dog.png" alt="dog" />
+            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+            <div class="project__description">
+              <h3>Youtube site</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- interests -->
+    <section id="interests" class="section">
+      <div class="section__container">
+        <h1>Another of my interests</h1>
+        <h3>minivelo(folding bicycle)</h3>
+        <div class="interests__categories">
+          <button class="category__btn2 active">
+            All <span class="category__count2">8</span>
+          </button>
+          <button class="category__btn2">
+            BROMPTON <span class="category__count2">3</span>
+          </button>
+          <button class="category__btn2">
+            BIRDY <span class="category__count2">3</span>
+          </button>
+          <button class="category__btn2">
+            FJEET <span class="category__count2">2</span>
+          </button>
+        </div>
+
+        <div class="interests__minivelo">
+          <a
+            href="https://thinkingncoding.tistory.com/"
+            class="minivelo"
+            target="blank"
+          >
+            <img class="project__img" src="imgs/bt1.png" alt="dog" />
+            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+            <div class="project__description">
+              <h3>브롬톤 C 라인 어반</h3>
+              <span>미드핸들바 블랙 라커 268</span>
+            </div>
+          </a>
+
+          <a
+            href="https://thinkingncoding.tistory.com/"
+            class="minivelo"
+            target="blank"
+          >
+            <img class="project__img" src="imgs/bt1.png" alt="dog" />
+            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+            <div class="project__description">
+              <h3>브롬톤 P라인 어반</h3>
+              <span>미드핸들바 미드나잇 블랙 427</span>
+            </div>
+          </a>
+
+          <a
+            href="https://thinkingncoding.tistory.com/"
+            class="minivelo"
+            target="blank"
+          >
+            <img class="project__img" src="imgs/bt2.png" alt="dog" />
+            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+            <div class="project__description">
+              <h3>브롬톤 P라인 어반</h3>
+              <span>미드핸들바 스톰 그레이 427</span>
+            </div>
+          </a>
+
+          <a
+            href="https://thinkingncoding.tistory.com/"
+            class="minivelo"
+            target="blank"
+          >
+            <img class="project__img" src="imgs/bt3.png" alt="dog" />
+            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+            <div class="project__description">
+              <h3>브롬톤 C 라인 익스플로어</h3>
+              <span>하이핸들바 피카딜리 블루 273</span>
+            </div>
+          </a>
+
+          <a
+            href="https://thinkingncoding.tistory.com/"
+            class="minivelo"
+            target="blank"
+          >
+            <img class="project__img" src="imgs/bt4.png" alt="dog" />
+            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+            <div class="project__description">
+              <h3>브롬톤 C 라인 익스플로어</h3>
+              <span>하이핸들바 파이어 코랄 273</span>
+            </div>
+          </a>
+
+          <a
+            href="https://thinkingncoding.tistory.com/"
+            class="minivelo"
+            target="blank"
+          >
+            <img class="project__img" src="imgs/bt2.png" alt="dog" />
+            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+            <div class="project__description">
+              <h3>브롬톤 P라인 어반</h3>
+              <span>미드핸들바 미드나잇 블랙 427</span>
+            </div>
+          </a>
+
+          <a
+            href="https://thinkingncoding.tistory.com/"
+            class="minivelo"
+            target="blank"
+          >
+            <img class="project__img" src="imgs/bt4.png" alt="dog" />
+            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+            <div class="project__description">
+              <h3>브롬톤 C라인 익스플로어</h3>
+              <span>랙 하이핸들바 블랙 라커 312</span>
+            </div>
+          </a>
+
+          <a
+            href="https://thinkingncoding.tistory.com/"
+            class="minivelo"
+            target="blank"
+          >
+            <img class="project__img" src="imgs/bt3.png" alt="dog" />
+            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+            <div class="project__description">
+              <h3>브롬톤 C라인 익스플로어</h3>
+              <span>랙 하이핸들바 블랙 라커 312</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials -->
+    <section id="testimonials" class="section">
+      <div class="section__container">
+        <h1>Testimonials</h1>
+        <h3>See what they say about me</h3>
+        <div class="testimonials">
+          <div class="testimonial">
+            <img
+              src="imgs/testimonial/avata.png"
+              alt="dog"
+              class="testimonial__avtar"
+            />
+            <div class="testmonial__speech-bubble">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and
+              </p>
+              <p class="name"><a href="">W.J</a>Apple</p>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="testmonial__speech-bubble">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and
+              </p>
+              <p class="name"><a href="">W.J</a>Apple</p>
+            </div>
+            <img
+              src="imgs/testimonial/man.png"
+              alt="dog"
+              class="testimonial__avtar"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h1 class="contact__title">Let's talk</h1>
+      <h2 class="contact__email">thinkingncoding@gmail.com</h2>
+      <div class="contact__links">
+        <a href="https://github.com/tnc111" target="blank">
+          <i class="fa fa-github"></i>
+        </a>
+        <a href="#" target="_blank">
+          <i class="fa fa-linkedin-square"></i>
+        </a>
+      </div>
+      <p class="contact__rights">2022 Coding TNC - All rights reserved</p>
+    </section>
+
+    <!-- Arrow up -->
+    <button class="arrow-up">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </body>
+</html>
