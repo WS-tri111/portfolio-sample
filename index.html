@@ -32,25 +32,12 @@
     <script src="main.js" defer></script>
   </head>
   <body>
-    <!-- 주석처리는 윈도우사용자는 "ctl + /", Mac user: "comman + /" 를 누르면 자동 완성 -->
-    <!-- <h1>Heading</h1> Typography를 위한 임시 보기
-    <h2>Heading</h2>
-    <h3>Heading</h3>
-    <p>Paragraph</p> -->
-    <!-- Navbar -->
     <nav id="navbar">
       <div class="navbar__logo">
         <i class="fa-brands fa-apple-pay"></i>
-        <!-- <i class="fa-brands fa-affiliatetheme"></i> -->
         <a href="#">Full-stack</a>
       </div>
-
-      <!-- <div class="navbar__menu"></div> //a01 삭제함-->
-      <!-- ul.navbar__menu>li.navbar__menu__item*6 -->
-      <!-- 위의 명령어로 인해 nav__menu 가 중복되니 <div class=nav__menu> a01삭제해야함. -->
       <ul class="navbar__menu">
-        <!-- 아래 active는 home 만 별도로 css에서 다르게 표현하기 위한 선택 구분자이다. -->
-        <!-- data다음에 우리가 원하는 data를 정의할수있다 target이라던지link같은것을이용해서 -->
         <li class="navbar__menu__item active" data-link="#home">Home</li>
         <li class="navbar__menu__item" data-link="#about">About</li>
         <li class="navbar__menu__item" data-link="#skills">Skills</li>
@@ -68,7 +55,6 @@
     </nav>
     <!-- Home -->
     <section id="home">
-      <!-- home__container 로 묶는 이유는 컨텐츠만 지정하기 위해서 -->
       <div class="home__container">
         <img src="imgs/face01.jpg" alt=tri111's profile photo"
         class="home__avatar">
@@ -84,7 +70,6 @@
     </section>
     <!-- About -->
     <section id="about" class="section section__container">
-      <!-- 위의 class="section" 부분을 다른  skills, work, testimonial,contact 등에 공통적으로 적용한다. -->
       <h1>About me</h1>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -151,7 +136,6 @@
           </div>
         </div>
         <div class="job">
-          <!-- tyle="margin-right: 15px; margin-left: 15px"는 원본그림사이즈가 서로 상이하여 마진을 주어 개별적으로 맞춤 -->
           <img
             src="imgs/jobs/saving.jpg"
             alt="savingbank"
@@ -172,8 +156,6 @@
     <!-- Skills -->
 
     <section id="skills" class="section">
-      <!-- 배경은 유지되면서 안의 컨텐츠는 max-width를 유지해야하므로 
-    새로운박스(section__container)를 하나 만든후   넣는다. -->
       <div class="section__container">
         <h1>Skills</h1>
         <h2>Skills & Attributes</h2>
@@ -193,8 +175,7 @@
                 <span>HTML</span>
                 <span>99%</span>
               </div>
-              <!-- 기존 html 태그를 이용하여 하지 않고 (: 스타일링하기 까다롭기때문에) -->
-              <!-- 2개의 div 를 이용하여 자체적으로 프로그레스 바를 만든다. -->
+
               <div class="skill__bar">
                 <div class="skill__value" style="width: 99%"></div>
               </div>
@@ -205,8 +186,7 @@
                 <span>CSS</span>
                 <span>99%</span>
               </div>
-              <!-- 기존 html 태그를 이용하여 하지 않고 (: 스타일링하기 까다롭기때문에) -->
-              <!-- 2개의 div 를 이용하여 자체적으로 프로그레스 바를 만든다. -->
+
               <div class="skill__bar">
                 <div class="skill__value" style="width: 90%"></div>
               </div>
@@ -302,7 +282,7 @@
             target="blank"
           >
             <img class="project__img" src="imgs/dog.png" alt="dog" />
-            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+
             <div class="project__description">
               <h3>Youtube site</h3>
               <span>Clone coding with HTML and CSS</span>
@@ -315,7 +295,7 @@
             target="blank"
           >
             <img class="project__img" src="imgs/dog.png" alt="dog" />
-            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+
             <div class="project__description">
               <h3>Youtube site</h3>
               <span>Clone coding with HTML and CSS</span>
@@ -332,7 +312,7 @@
               src="imgs/testimonial/avata.png"
               alt="dog"
             />
-            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+
             <div class="project__description">
               <h3>Youtube site</h3>
               <span>Clone coding with HTML and CSS</span>
@@ -349,7 +329,7 @@
               src="imgs/testimonial/man.png"
               alt="dog"
             />
-            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+
             <div class="project__description">
               <h3>Youtube site</h3>
               <span>Clone coding with HTML and CSS</span>
@@ -366,7 +346,7 @@
               src="imgs/testimonial/yaeri.png"
               alt="dog"
             />
-            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+
             <div class="project__description">
               <h3>Youtube site</h3>
               <span>Clone coding with HTML and CSS</span>
@@ -379,7 +359,7 @@
             target="blank"
           >
             <img class="project__img" src="imgs/dog.png" alt="dog" />
-            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+
             <div class="project__description">
               <h3>Youtube site</h3>
               <span>Clone coding with HTML and CSS</span>
@@ -392,7 +372,7 @@
             target="blank"
           >
             <img class="project__img" src="imgs/dog.png" alt="dog" />
-            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+
             <div class="project__description">
               <h3>Youtube site</h3>
               <span>Clone coding with HTML and CSS</span>
@@ -405,7 +385,7 @@
             target="blank"
           >
             <img class="project__img" src="imgs/dog.png" alt="dog" />
-            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+
             <div class="project__description">
               <h3>Youtube site</h3>
               <span>Clone coding with HTML and CSS</span>
@@ -441,7 +421,7 @@
             target="blank"
           >
             <img class="project__img" src="imgs/bt1.png" alt="dog" />
-            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+
             <div class="project__description">
               <h3>브롬톤 C 라인 어반</h3>
               <span>미드핸들바 블랙 라커 268</span>
@@ -454,7 +434,7 @@
             target="blank"
           >
             <img class="project__img" src="imgs/bt1.png" alt="dog" />
-            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+
             <div class="project__description">
               <h3>브롬톤 P라인 어반</h3>
               <span>미드핸들바 미드나잇 블랙 427</span>
@@ -467,7 +447,7 @@
             target="blank"
           >
             <img class="project__img" src="imgs/bt2.png" alt="dog" />
-            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+
             <div class="project__description">
               <h3>브롬톤 P라인 어반</h3>
               <span>미드핸들바 스톰 그레이 427</span>
@@ -480,7 +460,7 @@
             target="blank"
           >
             <img class="project__img" src="imgs/bt3.png" alt="dog" />
-            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+
             <div class="project__description">
               <h3>브롬톤 C 라인 익스플로어</h3>
               <span>하이핸들바 피카딜리 블루 273</span>
@@ -493,7 +473,7 @@
             target="blank"
           >
             <img class="project__img" src="imgs/bt4.png" alt="dog" />
-            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+
             <div class="project__description">
               <h3>브롬톤 C 라인 익스플로어</h3>
               <span>하이핸들바 파이어 코랄 273</span>
@@ -506,7 +486,7 @@
             target="blank"
           >
             <img class="project__img" src="imgs/bt2.png" alt="dog" />
-            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+
             <div class="project__description">
               <h3>브롬톤 P라인 어반</h3>
               <span>미드핸들바 미드나잇 블랙 427</span>
@@ -519,7 +499,7 @@
             target="blank"
           >
             <img class="project__img" src="imgs/bt4.png" alt="dog" />
-            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+
             <div class="project__description">
               <h3>브롬톤 C라인 익스플로어</h3>
               <span>랙 하이핸들바 블랙 라커 312</span>
@@ -532,7 +512,7 @@
             target="blank"
           >
             <img class="project__img" src="imgs/bt3.png" alt="dog" />
-            <!-- 이미지에 마우스를 데면 설명이 나오게 하기 -->
+
             <div class="project__description">
               <h3>브롬톤 C라인 익스플로어</h3>
               <span>랙 하이핸들바 블랙 라커 312</span>
